@@ -3,18 +3,18 @@
 #include <iostream>
 using namespace std;
 
-//Prototype functions to obtain the dynamically sized array variables from user input, to output the array data that was collected in one list,
+//Prototype functions to obtain the dynamic array variables from user input, to output the array data that was collected in one list,
 //and to find the sum of all of the values within the generated array.
 double* enterArrayData(double* arr, int size);
 void outputArrayData(double* arr, int size);
 void sumArray(double* arr, int size);
 
-//A constant variable to determine the maximum size of the dynamically sized array
+//A constant variable to determine the maximum size of the dynamic array
 const int SIZE = 5;
 
 int main()
 {
-    //initializes and declares a new dynamically sized array
+    //initializes and declares a new dynamic array
     double *iptr = nullptr;
     iptr = new double[SIZE];
 
@@ -23,7 +23,7 @@ int main()
     outputArrayData(iptr, SIZE);
     sumArray(iptr, SIZE);
 
-    //deletes the values of the dynamically sized array
+    //deletes the values of the dynamic array
     delete [] iptr;
     return 0;
 }
