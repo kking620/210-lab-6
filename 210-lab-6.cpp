@@ -3,7 +3,7 @@
 using namespace std;
 
 double* enterArrayData();
-double* outputArrayData();
+void outputArrayData(double* arr, int size);
 void sumArray();
 
 const int SIZE = 5;
@@ -13,7 +13,7 @@ int main()
     double *iptr = nullptr;
     iptr = enterArrayData();
 
-   
+    outputArrayData(iptr, SIZE);
     
 }
 
@@ -26,14 +26,25 @@ double* enterArrayData()
 
     for (int i = 0; i < SIZE; i++)
     {
-        cout << "> Element #" << i << ": \n";
+        cout << "> Element #" << i << ": ";
         cin >> array[i];
+        cout << endl;
     }
 
+    cout << "Data entry complete.\n";
     return array;
 }
 
-double* outputArrayData(double &arr)
+void outputArrayData(double* arr, int size)
+{
+    cout << "Outputting array elements: ";
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " \n";  
+    }
+}
+
+void sumArray()
 {
 
 }
